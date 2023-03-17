@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-
 /**
  * main - Entry point
  *
@@ -29,9 +27,7 @@ putchar(k);
 putchar(l);
 if (i != 57 || j != 56 || k != 57 || l != 57)
 {
-/*putchar(',');*/
 putchar(44);
-/*putchar(' ');*/
 putchar(32);
 }
 else
@@ -47,8 +43,6 @@ continue;
 }
 }
 }
-
 putchar('\n');
-
 return (0);
 }
