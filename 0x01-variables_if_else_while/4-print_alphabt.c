@@ -1,24 +1,23 @@
 #include <stdio.h>
-/* more headers goes there */
+
 
 /**
  * main - Entry point
  *
- * Return: Always 1 (Success)
+ * Return: Always 0 (Success)
  */
-int main ()
+int main(void)
 {
-        char i;
+char i;
 
-for (i='a'; i<='z'; i++)
+for (i = 'a'; i <= 'z'; i++)
 {
-
-        if (i=='e' || i=='q')
-        {
-                continue;
-        }
+if (i == 'e' || i == 'q')
+{
+continue;
+}
         
-        putchar(i); 
+putchar(i); 
         
 }
 
