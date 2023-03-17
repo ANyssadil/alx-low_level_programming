@@ -20,7 +20,7 @@ for (i = 48; i < 58; i++)
                 {
                         for (l = 48; l < 58; l++)
                         {
-                                        if (j<l)
+                                        if (j<=l)
                                         {
                                                 putchar(i);
                                                 putchar(j);
