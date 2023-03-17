@@ -19,7 +19,7 @@ putchar(32);
 }
 
 putchar(57);
-putchar('\n');
+/*putchar('\n');*/
 
 return (0);
 }
