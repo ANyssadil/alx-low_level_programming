@@ -4,15 +4,15 @@
 /**
  * main - Entry point
  *
- * Return: Always 1 (Success)
+ * Return: Always 0 (Success)
  */
-int main ()
+int main (void)
 {
-        char i;
+char i;
 
-for (i='a'; i<='z'; i++)
+for (i = 'a'; i <= 'z'; i++)
 {
-        putchar(i);
+putchar(i);
 	
 }
 
