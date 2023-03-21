@@ -18,6 +18,6 @@ else
 continue;
 }
 }
-printf("%d", sum);
+printf("%d\n", sum);
 return (0);
 }
