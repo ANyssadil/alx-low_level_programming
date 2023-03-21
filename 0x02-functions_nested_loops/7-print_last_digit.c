@@ -13,6 +13,6 @@ if (i<0)
 i=-1*i;
 }
 result= i%10;
-putchar(result +'0');
+_putchar(result +'0');
 return(result);
 }
