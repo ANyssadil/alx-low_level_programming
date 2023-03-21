@@ -5,21 +5,21 @@
  */
 int main(void)
 {
-unsigned int a = 1;
-unsigned int b = 1;
+unsigned long int a = 1;
+unsigned long int b = 1;
 int i;
-unsigned  int c;
-printf("%u, ", b);
+unsigned long int c;
+printf("%lu, ", b);
 for (i = 0; i < 49; i++)
 {
 c = a + b;
 if (i != 48)
 {
-printf("%u, ", c);
+printf("%lu, ", c);
 }
 else
 {
-printf("%u", c);
+printf("%lu", c);
 }
 a = b;
 b = c;
