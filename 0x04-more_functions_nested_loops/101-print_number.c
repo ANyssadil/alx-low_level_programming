@@ -8,7 +8,7 @@
 void print_number(int n)
 {
 int d = 10000;
-int p, r;
+int p,r, N;
 
 	if (n == 0)
 	{
@@ -17,31 +17,36 @@ int p, r;
 
 	if (n < 0)
 	{
-		n = -n;
+		N= - n;
 		_putchar('-');
 	}
-	if (n != 0)
+
+	else
 	{
-		p = n / d;
-		r = n % d;
+		N = n;
+	}
+
+		p = N / d;
+		r = N % d;
 		while (p == 0)
 		{
-		n = r;
-		d = d / 10;
-		p = n / d;
-		r = n % d;
+		N = r ;
+		d = d / 10 ;
+		p = N / d;
+		r = N % d;
 		}
 
 		while (d >= 10)
 		{
-		p = n / d;
-		r = n % d;
+		p = N / d;
+		r = N % d;
 		_putchar(p + '0');
-		n = r;
-		d = d / 10;
+		N = r ;
+		d = d / 10 ;
 		}
 		_putchar(r + '0');
 
-	}
+
 
 }
+
