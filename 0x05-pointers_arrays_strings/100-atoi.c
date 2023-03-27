@@ -32,7 +32,7 @@ int minus=0, plus=0;
 					plus++;
 				}
 			}
-		 if (minus > plus && i>=1 )
+		 if ((minus > plus && i>=1) || (minus %2 != 0 && i>=1) )
 		 {
 			sign = -1;
 		 }
