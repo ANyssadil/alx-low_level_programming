@@ -8,8 +8,8 @@
  */
 void print_number(int n)
 {
-	int d = 10000;
-	int a, r, flag = 0, N;
+	int a, r, flag = 0, d = 10000;
+	unsigned int N;
 
 	if (n == 0)
 	{
