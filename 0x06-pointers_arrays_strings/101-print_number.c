@@ -28,7 +28,7 @@ void print_number(int n)
 			N = n;
 		}
 
-		while (d >= 10)
+		while (N >= 10)
 		{
 			a = N / d;
 			r = N % d;
