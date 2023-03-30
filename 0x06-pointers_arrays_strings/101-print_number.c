@@ -9,33 +9,43 @@
 void print_number(int n)
 {
 	int d = 10000;
-	int a;
-	int r;
-	int flag = 0;
+	int a, r, flag = 0, N;
 
-	if (n < 0)
+	if (n == 0)
 	{
-		_putchar('-');
-		n = -n;
+		_putchar(n + '0');
 	}
-
-	while (d >= 10)
+	else
 	{
-		a = n / d;
-		r = n % d;
-		if (a == 0 && flag == 0)
+		if (n < 0)
 		{
-			n = r;
-			d = d / 10;
-			continue;
-		}
+			_putchar('-');
+			N = -n;
+			}
+
 		else
 		{
-			_putchar(a + '0');
-			flag = 1;
+			N = n;
 		}
-		n = r;
-		d = d / 10;
+
+		while (d >= 10)
+		{
+			a = N / d;
+			r = N % d;
+			if (a == 0 && flag == 0)
+			{
+				N = r;
+				d = d / 10;
+					continue;
+			}
+			else
+			{
+				_putchar(a + '0');
+				flag = 1;
+			}
+			N = r;
+			d = d / 10;
+		}
+		_putchar(N + '0');
 	}
-	_putchar(n + '0');
 }
