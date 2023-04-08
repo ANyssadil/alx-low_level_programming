@@ -8,23 +8,24 @@
 
 char *last_occ(char *s1, char c)
 {
-    char *s1_bis;
-    if (*s1 == '\0')
-        return (0);
-    s1_bis = last_occ(s1 + 1, c);
-    if (s1_bis != 0)
-        return s1_bis;
+	char *s1_bis;
 
-    if (*s1 == c)
-    {
-        if (*(s1 + 1) == '\0' || last_occ(s1 + 1, c) == 0)
-            return s1;
-    }
+	if (*s1 == '\0')
+		return (0);
 
-    return (0);
+	s1_bis = last_occ(s1 + 1, c);
+
+	if (s1_bis != 0)
+		return (s1_bis);
+
+	if (*s1 == c)
+	{
+		if (*(s1 + 1) == '\0' || last_occ(s1 + 1, c) == 0)
+			return (s1);
+	}
+
+	return (0);
 }
-
-
 /**
  *wildcmp - compares two strings.
  *@s1: string to be compared.
@@ -33,38 +34,37 @@ char *last_occ(char *s1, char c)
  */
 int wildcmp(char *s1, char *s2)
 {
-    if (*s1 == '\0' && *s2 =='\0')
-        return (1);
-    else if (*s1 == '\0' && *s2 =='*')
-    {
-        if (*(s2+1) != '*' && *(s2+1) != '\0')
-          return(0);
-        else
-        return (wildcmp (s1, s2+1));
-    }
-    else if (*s1 != '\0' && *s2 !='\0')
-    {
-      if (*s2 =='*' && *(s2+1)== '\0')
-        return (1);
-      else if (*s2 =='*' && *(s2+1)!= '*')
-      {
-           if(last_occ(s1, *(s2+1)) != 0)
-           {
-           s1=last_occ(s1, *(s2+1));
-           return (wildcmp (s1+1, s2+2));
-            }
-          else
-          return (0);
-      }
-      else if (*s2 != '*' && *s1 != '*')
-          if (*s1 != *s2)
-          return (0);
-          else
-          return (wildcmp (s1+1, s2+1));
-      else if (*s2 =='*' && *(s2+1)== '*')
-          return (wildcmp (s1, s2+1));
-    }
-        return(0);
+	if (*s1 == '\0' && *s2 == '\0')
+		return (1);
+	else if (*s1 == '\0' && *s2 == '*')
+	{
+		if (*(s2 + 1) != '*' && *(s2 + 1) != '\0')
+			return (0);
+		else
+			return (wildcmp(s1, s2 + 1));
+	}
+	else if (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s2 == '*' && *(s2 + 1) == '\0')
+			return (1);
+		else if (*s2 == '*' && *(s2 + 1) != '*')
+		{
+			if (last_occ(s1, *(s2 + 1)) != 0)
+			{
+				s1 = last_occ(s1, *(s2 + 1));
+				return (wildcmp(s1 + 1, s2 + 2));
+			}
+			else
+				return (0);
+		}
+		else if (*s2 != '*' && *s1 != '*')
+			if (*s1 != *s2)
+				return (0);
+			else
+				return (wildcmp(s1 + 1, s2 + 1));
+		else if (*s2 == '*' && *(s2 + 1) == '*')
+			return (wildcmp(s1, s2 + 1));
+	}
+	return (0);
 
 }
-
