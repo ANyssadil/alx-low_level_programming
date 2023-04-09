@@ -14,7 +14,10 @@ int main(int argc, char *argv[])
 	int flag = 1;
 
 	if (argc < 2)
+	{
 		printf("%d\n", sum);
+		return (0);
+	}
 	else if (argc >= 2)
 	{
 	for (i = 1; i < argc; i++)
