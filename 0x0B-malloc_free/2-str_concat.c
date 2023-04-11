@@ -8,7 +8,7 @@
  *@s2: string to be concatenated.
  * Return: pointer to concatenation of s1 and s2.
  */
-ichar *str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
 	unsigned long int i = 0, j, l1 = 0, l2 = 0;
