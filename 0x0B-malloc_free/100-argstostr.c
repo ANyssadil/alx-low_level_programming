@@ -24,10 +24,10 @@ char *argstostr(int ac, char **av)
 			c+=j;
 		}
 		
-		c++;
+		
 	}	
 
-	ptr=(char*)malloc(1 + c * sizeof(char));
+	ptr=(char*)malloc((1 + c) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	
